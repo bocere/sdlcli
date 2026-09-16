@@ -8,7 +8,7 @@ A command-line interface to an SDL Knowledge Center repository.
 
 Because I use Linux. And sometimes you just need to answer a small question ("Which version of
 this topic is used in this publication?") and don't want to fire up your Windows VM just for that.
-Plus you can use it as the backend to web applications running on internal Linux servers.
+Plus you can use it as the backend to web applications running on your internal Linux servers.
 
 ## Installation 
 
