@@ -4,6 +4,12 @@ A command-line interface to an SDL Knowledge Center repository.
 [SDL Knowledge Center](https://docs.rws.com/787645/156929/sdl-tridion-docs-14/product-overview-and-architecture) 
 (rebranded as Tridion Docs) is a content management system for technical writers.
 
+## What? Why?
+
+Because I use Linux. And sometimes you just need to answer a small question ("Which version of
+this topic is used in this publication?") and don't want to fire up your Windows VM just for that.
+Plus you can use it as the backend to web applications running on internal Linux servers.
+
 ## Installation 
 
 1. Install `zeep` and `lxml`.
