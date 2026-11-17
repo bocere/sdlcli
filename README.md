@@ -23,7 +23,7 @@ pip3 install lxml
 2. Copy `sdl` into your $PATH.
 
 ```
-git clone https://github.com/tintinno/sdlcli/
+git clone https://github.com/bocere/sdlcli/
 cp sdlcli/sdl ~/.local/bin/
 ```
 
@@ -32,14 +32,14 @@ cp sdlcli/sdl ~/.local/bin/
 1. Run `sdl setup` to initialize the program with your SDL URL and credentials.
 
 ```
-[tintinno@localhost]$ sdl setup
+[bocere@localhost]$ sdl setup
 Warning: No metadata file. Run `sdl setup`.
 Creating ~/.sdlcli directory.
 No metadata file. Downloading metadata.yaml from GitHub
 Enter the SDL URL [https://example.com/InfoShareWS/]: https://ccms.example.com/InfoShareWS/    
-Enter your SDL username: tintinno 
+Enter your SDL username: bocere 
 Enter your SDL password:
-[tintinno@localhost]$
+[bocere@localhost]$
 ```
 
 ## Management Types
@@ -83,22 +83,22 @@ You can use the long form (`--guid`) or short form (`-g`) of any argument.
 
 1. Get the value of the FTITLE for a specific GUID.
    ```
-   [tintinno@localhost:~]$ sdl doc getmd --guid GUID-C20F2738-F47C-4709-90B2-AF37779EF161 --version 1 --field ftitle
+   [bocere@localhost:~]$ sdl doc getmd --guid GUID-C20F2738-F47C-4709-90B2-AF37779EF161 --version 1 --field ftitle
    Configure Your ClouD Profile
-   [tintinno@localhost:~]$
+   [bocere@localhost:~]$
    ```
 
 1. Set the value of the FTITLE for a specific GUID.
    ```
-   [tintinno@localhost:~]$ sdl doc setmd --guid GUID-C20F2738-F47C-4709-90B2-AF37779EF161 --version 1 --field ftitle --newvalue "Configure Your Cloud Profile"
+   [bocere@localhost:~]$ sdl doc setmd --guid GUID-C20F2738-F47C-4709-90B2-AF37779EF161 --version 1 --field ftitle --newvalue "Configure Your Cloud Profile"
    success
-   [tintinno@localhost:~]$
+   [bocere@localhost:~]$
    ```
 
 1. Download the XML of a map or topic.
    ```
-   [tintinno@localhost:~]$ sdl doc getxml -g GUID-C20F2738-F47C-4709-90B2-AF37779EF161 -v 1 -o cloud-profile.xml
-   [tintinno@localhost:~]$
+   [bocere@localhost:~]$ sdl doc getxml -g GUID-C20F2738-F47C-4709-90B2-AF37779EF161 -v 1 -o cloud-profile.xml
+   [bocere@localhost:~]$
    ```
 
 ### Manage Publications
@@ -120,35 +120,35 @@ Run `sdl pub <command> -h` to see the arguments for each command.
 
 1. Get the GUID of the bookmap used in version 1 of a publication.
    ```
-   [tintinno@localhost:~]$ sdl pub getmd -g GUID-23E1AB83-C467-4D6E-9CC6-4FAF1EF628DF -v 1 -f fishmasterref
+   [bocere@localhost:~]$ sdl pub getmd -g GUID-23E1AB83-C467-4D6E-9CC6-4FAF1EF628DF -v 1 -f fishmasterref
    GUID-F4D13FDB-5D1C-4CB0-8ED0-A6B1BCAF170F
-   [tintinno@localhost:~]$
+   [bocere@localhost:~]$
    ```
 
 1. Get the GUIDs of the variables used in version 2 of a publication.
    ```
-   [tintinno@localhost:~]$ sdl pub getmd -g GUID-8AAD6C3E-4D54-45CE-A0CF-9D6364ACED5A -v 2 -f fishresources
+   [bocere@localhost:~]$ sdl pub getmd -g GUID-8AAD6C3E-4D54-45CE-A0CF-9D6364ACED5A -v 2 -f fishresources
    GUID-9A10B97F-EC38-473D-843F-D8FF6B853856, GUID-CFE568A5-5104-44DE-BD8A-E0BAA68DD66E
-   [tintinno@localhost:~]$
+   [bocere@localhost:~]$
    ```
 
 1. Get the topics from a baseline that are in a draft state.
    ```
-   [tintinno@localhost]$ sdl pub getbl -g GUID-756127B8-17F6-4FFF-B549-2DDC34C6A3D3 -v 1 --drafts
+   [bocere@localhost]$ sdl pub getbl -g GUID-756127B8-17F6-4FFF-B549-2DDC34C6A3D3 -v 1 --drafts
    Baseline ID = 'GUID-29E1C577-A389-44AF-9559-2F22C570A2ED'
     GUIDs                                     | Version | Created             | Last Modified       | Status | Title
     ------------------------------------------+---------+---------------------+---------------------+--------+----------
     GUID-604ACB49-6FDD-4A40-A893-56179EC438D5 | 1       | 08/07/2020 10:04:08 | 08/07/2020 10:04:08 | Draft  | 'review1'
     GUID-DD16EE1B-2405-4099-AAB1-8DE38D93ABAC | 1       | 24/04/2020 11:06:29 | 24/04/2020 11:06:29 | Draft  | 'review1a'
-   [tintinno@localhost]$
+   [bocere@localhost]$
    ```
 
 1. Set every topic in a publication to its released state.
    ```
-   [tintinno@localhost]$ sdl pub release -g GUID-756127B8-17F6-4FFF-B549-2DDC34C6A3D3 -v 1
+   [bocere@localhost]$ sdl pub release -g GUID-756127B8-17F6-4FFF-B549-2DDC34C6A3D3 -v 1
    Released GUID-604ACB49-6FDD-4A40-A893-56179EC438D5 v1 'review1'
    Released GUID-DD16EE1B-2405-4099-AAB1-8DE38D93ABAC v1 'review1a'
-   [tintinno@localhost]$
+   [bocere@localhost]$
    ```
 
 ### Manage Directories
@@ -168,24 +168,24 @@ Options:
 When listing folders and files, it's often convenient to define bash variables for frequently used 
 locations rather than write out the full path each time.
 ```
-export TEST="MyOrg/MyProduct/Testing/tintinno"
+export TEST="MyOrg/MyProduct/Testing/bocere"
 ```
 
 **Examples**
 
 1. List all the subfolders of a repository folder.
    ```
-   [tintinno@localhost]$ sdl dir folders "$TEST"
-   Subfolders of 'MyOrg/MyProduct/Testing/tintinno':
+   [bocere@localhost]$ sdl dir folders "$TEST"
+   Subfolders of 'MyOrg/MyProduct/Testing/bocere':
     - maps            (type = Map)
     - pub             (type = Publications)
     - topics          (type = Topic)
     - images          (type = Image)
-   [tintinno@localhost]$
+   [bocere@localhost]$
    ```
 1. List all the files of a folder.
    ```
-   [tintinno@localhost]$ sdl dir files "$TEST/maps"
+   [bocere@localhost]$ sdl dir files "$TEST/maps"
    GUID-D81FC37D-378A-4493-93DF-3AF6708DFDD1 | 1 | review0
    GUID-DD16EE1B-2405-4099-AAB1-8DE38D93ABAC | 1 | review1
    GUID-AE041C27-4A1B-4210-8701-391E0959E660 | 1 | review18
@@ -200,7 +200,7 @@ export TEST="MyOrg/MyProduct/Testing/tintinno"
    GUID-3399631C-07E4-4E5A-B4D7-8C6C0471063F | 1 | test
    GUID-70F4E32B-74E6-4120-8BAE-F78C4AF7D300 | 1 | testpub
    GUID-DBEA03EE-4D96-4955-8A18-025045F1AD6B | 4 | testpub - chapter
-   [tintinno@localhost]$
+   [bocere@localhost]$
    ```
    The output lists GUID, version, and title.
 
