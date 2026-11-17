@@ -24,7 +24,7 @@ pip3 install lxml
 
 ```
 git clone https://github.com/tintinno/sdlcli/
-cp sdlcli/sdl ~/bin/
+cp sdlcli/sdl ~/.local/bin/
 ```
 
 ## Setup
